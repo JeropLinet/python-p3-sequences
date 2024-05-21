@@ -2,13 +2,20 @@
 
 def print_fibonacci(length):
     if length <= 0:
-        print([])  
+        print([])
         return
     
-    fibonacci_sequence=[0, 1]  
+    fibonacci_sequence=[] 
+
+    if length >= 1:
+        fibonacci_sequence.append(0)  
+    
+    if length >= 2:
+        fibonacci_sequence.append(1) 
+
     for n in range(2,length):
         next_value = fibonacci_sequence[n - 1] + fibonacci_sequence[n - 2]
         fibonacci_sequence.append(next_value)
-    
-    print(fibonacci_sequence[:length]) 
+   
+    print(fibonacci_sequence) 
     pass
